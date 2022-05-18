@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ListWCursor, FilterParams, SortOrder, Range, WhereIn, WhereContains } from 'shared/interfaces';
+import { ListWCursor, FilterParams, SortOrder, Range, WhereIn, WhereContains } from './interfaces';
 
 
 export abstract class ApiService<T> {
@@ -23,11 +23,7 @@ export abstract class ApiService<T> {
    *  constructor(http: HttpClient) {
    *    super(http);
    *  }
-   *
-   *   public root(): string {
-   *     return 'users';
-   *   }
-   * }
+   *   v
    * ```
    */
   public abstract root(): string;
