@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/post.model';
 import { PostService } from 'src/app/post.service';
+import { ApiService } from 'src/app/shared/api.service';
 
 // import model
 
@@ -9,7 +10,11 @@ import { PostService } from 'src/app/post.service';
   selector: 'app-show',
   templateUrl: './show.component.html',
   styleUrls: ['./show.component.css']
+
 })
+
+
+
 export class ShowComponent implements OnInit {
 
   Post: Post[]
@@ -26,6 +31,6 @@ export class ShowComponent implements OnInit {
     });
   }
 
-  deleteRow = (post) => this.postService.deletePost(post);
 
-}
+  deleteRow = (post: number) => { this.postService.destroy(post) }
+} 
