@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { ApiService } from 'src/app/shared/api.service';
+import { Post } from 'src/app/post.model';
 import { PostService } from 'src/app/post.service';
+
 
 
 
@@ -12,28 +16,14 @@ import { PostService } from 'src/app/post.service';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
+
 export class CreateComponent implements OnInit {
+  Post: Post[]
+  constructor(private postService: PostService) { }
 
-  public postForm: FormGroup;
+  ngOnInit() {
 
-  constructor(
-    public postService: PostService,
-    public formBuilder: FormBuilder,
-    public router: Router
-  ) {
-    this.postForm = this.formBuilder.group({
-      nombre: [''],
-      apellido: [''],
-      residencia: [''],
-
-    })
   }
 
-  ngOnInit(): void {
-  }
-
-  onSubmit() {
-    this.postService.createPost(this.postForm.value)
-    this.router.navigate([''])
-  }
+  store = (post: boolean) => { this.postService.store(post) }
 }

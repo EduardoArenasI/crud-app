@@ -21,14 +21,7 @@ export class ShowComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe((res) => {
-      this.Post = res.map((e) => {
-        return {
-          id: e.payload.doc.id,
-          ...(e.payload.doc.data() as Post)
-        };
-      });
-    });
+
   }
 
 
