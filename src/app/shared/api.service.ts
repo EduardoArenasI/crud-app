@@ -133,7 +133,7 @@ export abstract class ApiService<T> {
    * @param id The current `id` of the entity to be deleted
    * @return an `Observable` of the saved entity of type `<T>`
    */
-  public destroy(id: number): Observable<T> {
+  public destroy(id: string): Observable<T> {
     return this.http.delete<T>(`${this.uri}/${id}`);
   }
 }

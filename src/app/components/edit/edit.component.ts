@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from 'src/app/post.service';
-
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from 'src/app/shared/api.service';
+
 import { Post } from 'src/app/post.model';
+import { PostService } from 'src/app/post.service';
+import { ApiService } from 'src/app/shared/api.service';
 
 
 @Component({
@@ -20,5 +20,8 @@ export class EditComponent implements OnInit {
   ngOnInit() {
 
   }
-  update = (post: boolean) => { this.postService.update(post) }
+  update = (post: Post) => { this.postService.update(post.id, post) };
 }
+
+
+

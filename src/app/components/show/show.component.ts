@@ -25,5 +25,5 @@ export class ShowComponent implements OnInit {
   }
 
 
-  deleteRow = (post: number) => { this.postService.destroy(post) }
+  deleteRow = (post: string) => { this.postService.destroy(post) }
 } 

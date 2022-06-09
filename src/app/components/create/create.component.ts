@@ -25,5 +25,5 @@ export class CreateComponent implements OnInit {
 
   }
 
-  store = (post: boolean) => { this.postService.store(post) }
+  store = (post: Post) => { this.postService.store(post) }
 }
