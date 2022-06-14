@@ -20,7 +20,7 @@ export class PostService extends ApiService<Post> {
   // constructor(private angularFirestore: AngularFirestore) { }
 
   // metodos 
-            
+
   getPosts() {
     /*    return this.angularFirestore
          .collection("posts")

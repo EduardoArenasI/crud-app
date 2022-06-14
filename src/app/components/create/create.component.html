@@ -1,7 +1,8 @@
 <h2>Create component</h2>
 
-<form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate >
+<!-- <form [formGroup]="" (ngSubmit)="postForm)" novalidate > -->
 
+<form> 
     <div class="mb-3">
         <label class="form-label">Nombre</label>
         <input formControlName="nombre" type="text" class="form-control" required>
@@ -15,6 +16,6 @@
         <input formControlName="residencia" type="text" class="form-control" required>
     </div>
 
-    <button [disabled]="!postForm.valid" type="submit" class="btn btn-primary">Enviar</button>
+    <button>Enviar</button>
 
 </form>
