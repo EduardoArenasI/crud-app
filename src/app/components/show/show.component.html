@@ -15,7 +15,9 @@
 </thead>
 
 
-<tbody  >
+
+
+<tbody>
     <tr *ngFor="let post of Post">
             <td>{{post.nombre}}</td>
             <td>{{post.apellido}}</td>
@@ -23,7 +25,6 @@
             <td>
              <button routerLink="/edit/{{post.id}}" class="btn btn-outline-dark" ><i class="fa-solid fa-pen-to-square"></i></button>
              <button (click)="deleteRow(post.id)" class="btn btn-outline-dark"> <i class="fa-solid fa-delete-left"></i></button>
- -->
             </td>
     </tr>
 </tbody>
